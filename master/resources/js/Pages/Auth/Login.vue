@@ -8,7 +8,7 @@
                 </div>
 
             </div>
-            <h3 class="login-title">Sign in</h3>
+            <h3 class="login-title">Sign in (Tét change)</h3>
 
             <div
                 class="form-group"
@@ -61,7 +61,7 @@
                 <i v-if="isLoading" class="fa fa-spinner fa-pulse ml-2"></i>
             </button>
             <p class="text-center">
-                <small> Dont have an account?
+                <small> Don't have an account?
                     <inertia-link href="/register"> Create one </inertia-link>
                 </small>
             </p>
