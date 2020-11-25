@@ -27,8 +27,9 @@ use Illuminate\Support\Facades\Route;
 // Route::get('/', function () {
 //     return view('static-page/index');
 // });
+
 // Add static page
-// Route::get('/', [HomeStaticController::class, 'index'])->name('index');
+Route::get('/home', [HomeStaticController::class, 'home']);
 
 // pages
 Route::get('/login', [AuthController::class, 'login'])->name('login');

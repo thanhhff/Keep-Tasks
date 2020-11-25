@@ -8,7 +8,7 @@ use Inertia\Inertia;
 
 class HomeStaticController extends Controller
 {
-    public function index2(Request $request)
+    public function home(Request $request)
     {
         return view('static-page/index');
     }
