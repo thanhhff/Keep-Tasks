@@ -28,7 +28,7 @@ Route::get('/login', [AuthController::class, 'login'])->name('login');
 Route::get('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/forgot-password', [AuthController::class, 'forgotPassword'])->name('forgot-password');
 
-Route::middleware(['auth:sanctum', 'verified'])->group(function() {
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     // Dashboards
     Route::get('/', [DashboardController::class, 'index'])->name('home');
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
@@ -54,7 +54,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function() {
 });
 
 // resource route
-Route::middleware(['auth:sanctum', 'verified'])->group(function() {
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('/items', ItemController::class);
     Route::apiResource('/stages', StageController::class);
     Route::apiResource('/standups', StandupController::class);
