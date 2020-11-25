@@ -14,7 +14,7 @@
     <!--    <meta name="generator" content="">-->
     <meta name="robots" content="index, follow">
 
-    <link href="favicon/favicon.ico" rel="icon" type="image/x-icon">
+    <link href="favicon.ico" rel="icon" type="image/x-icon">
 
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600" rel="stylesheet">
