@@ -3,7 +3,7 @@
       <div class="logo-side">
           <!-- <div class="app-side__section-title"> -->
           <!-- <span class="side-logo">T</span><span class="dot">.</span> -->
-          <img src="logo.png" alt="Keep Tasks" loading="lazy">
+          <img src="https://imgur.com/mggFBED.png" alt="Keep Tasks" loading="lazy">
       </div>
     <div
       class="nav flex-column nav-pills"
@@ -96,7 +96,7 @@ export default {
 <style lang="scss" scoped>
 
   .logo-side {
-    padding: 20px 7px 7px 7px;
+    padding: 15px 0px 0px 0px;
   }
 
 .app-side {
@@ -109,7 +109,7 @@ export default {
   box-shadow: transparentize($color: #000000, $amount: 0.7) 3px 3px 5px;
   position: relative;
   display: grid;
-  grid-template-rows: 64px 1fr 1fr;
+  grid-template-rows: 64px 2fr 1fr;
   z-index: 1001;
 
 
