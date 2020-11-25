@@ -1,7 +1,9 @@
 <template>
   <div class="app-side">
-      <div class="app-side__section-title">
-          <span class="side-logo">D</span><span class="dot">.</span>
+      <div class="logo-side">
+          <!-- <div class="app-side__section-title"> -->
+          <!-- <span class="side-logo">T</span><span class="dot">.</span> -->
+          <img src="logo.png" alt="Keep Tasks" loading="lazy">
       </div>
     <div
       class="nav flex-column nav-pills"
@@ -92,6 +94,11 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
+  .logo-side {
+    padding: 20px 7px 7px 7px;
+  }
+
 .app-side {
   @apply bg-purple-900 text-white;
   height: 100vh;
@@ -104,6 +111,8 @@ export default {
   display: grid;
   grid-template-rows: 64px 1fr 1fr;
   z-index: 1001;
+
+
 
   .nav-container {
       display: flex;
