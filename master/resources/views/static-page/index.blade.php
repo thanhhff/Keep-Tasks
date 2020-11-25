@@ -38,8 +38,7 @@
                 <!-- Nav -->
                 <nav class="navbar navbar-expand-lg">
                     <!-- Logo -->
-                    <!-- <img src="/logo.png" alt="juno_okyo" loading="lazy" width="36" height="36"> -->
-                    <a class="navbar-brand" href="./" aria-label="Front">Keep Tasks</a>
+                    <a class="navbar-brand" href="" aria-label="Front">Keep Tasks</a>
                     <!-- End Logo -->
 
                     <!-- Responsive Toggle Button -->
@@ -62,7 +61,7 @@
                         <div class="navbar-body header-abs-top-inner">
                             <ul class="navbar-nav">
                                 <li class="navbar-nav-item active">
-                                    <a class="nav-link" href="./">Trang chủ</a>
+                                    <a class="nav-link" href="">Trang chủ</a>
                                 </li>
 
                                 <!-- TODO 1 -->
@@ -72,7 +71,7 @@
 
                                 <!-- TODO3: LOGIN -->
                                 <li class="navbar-nav-last-item">
-                                    <a class="btn btn-sm btn-primary transition-3d-hover" href="./login">Đăng Nhập
+                                    <a class="btn btn-sm btn-primary transition-3d-hover" href="{{route('login')}}">Đăng Nhập
                                     </a>
                                 </li>
                             </ul>
