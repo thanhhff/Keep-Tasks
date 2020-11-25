@@ -67,7 +67,7 @@ return [
     |
     */
 
-    'timezone' => getenv('APPLICATION_TIMEZONE', 'UTC'),
+    'timezone' => 'Asia/Ho_Chi_Minh',
 
     /*
     |--------------------------------------------------------------------------
