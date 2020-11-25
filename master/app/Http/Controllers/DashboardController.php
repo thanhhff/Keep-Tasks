@@ -55,6 +55,7 @@ class DashboardController extends Controller
             ])->get()
         ]);
     }
+
     public function planner(Request $request)
     {
         $user = $request->user();
@@ -75,6 +76,7 @@ class DashboardController extends Controller
             'scheduled' => ItemResource::collection(Item::getByCustomField(['date', $date], $request->user()))
         ]);
     }
+
     public function blank(Request $request)
     {
         return Inertia::render('Blank');

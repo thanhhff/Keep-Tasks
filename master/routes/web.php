@@ -4,6 +4,7 @@ use App\Http\Controllers\AuthController;
 use App\Http\Controllers\BoardController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FieldController;
+use App\Http\Controllers\HomeStaticController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\StageController;
 use App\Http\Controllers\LinkController;
@@ -22,6 +23,12 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+
+// Route::get('/', function () {
+//     return view('static-page/index');
+// });
+// Add static page
+// Route::get('/', [HomeStaticController::class, 'index'])->name('index');
 
 // pages
 Route::get('/login', [AuthController::class, 'login'])->name('login');
