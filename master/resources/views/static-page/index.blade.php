@@ -61,17 +61,17 @@
                         <div class="navbar-body header-abs-top-inner">
                             <ul class="navbar-nav">
                                 <li class="navbar-nav-item active">
-                                    <a class="nav-link" href="">Trang chủ</a>
+                                    <a class="nav-link" href="">Home</a>
                                 </li>
 
                                 <!-- TODO 1 -->
                                 <li class="navbar-nav-item">
-                                    <a class="nav-link" href="">Hướng dẫn</a>
+                                    <a class="nav-link" href="">User Guide</a>
                                 </li>
 
                                 <!-- TODO3: LOGIN -->
                                 <li class="navbar-nav-last-item">
-                                    <a class="btn btn-sm btn-primary transition-3d-hover" href="{{route('login')}}">Đăng Nhập
+                                    <a class="btn btn-sm btn-primary transition-3d-hover" href="{{route('login')}}">Login
                                     </a>
                                 </li>
                             </ul>
