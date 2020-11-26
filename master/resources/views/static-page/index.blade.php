@@ -361,7 +361,7 @@
         <div class="bg-primary text-center bg-img-hero" style="background-image: url(assets/front/images/abstract-shapes-5.svg);">
             <div class="container space-2">
                 <div class="mb-5">
-                    <h2 class="text-white">Bạn có câu hỏi ?</h2>
+                    <h2 class="text-white">Contact Us</h2>
                 </div>
                 <a class="btn btn-light transition-3d-hover" href="https://www.facebook.com/thanhhff/" target="_blank" rel="noopener nofollow">Liên Hệ</a>
             </div>
@@ -384,13 +384,13 @@
                 <ul class="nav nav-sm nav-x-0 justify-content-center text-md-center">
                     <li class="nav-item px-3">
                         <!-- TODO -->
-                        <a class="nav-link" href="" target="_blank" rel="noopener">Về Chúng Tôi</a>
+                        <a class="nav-link" href="" target="_blank" rel="noopener">About</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="" target="_blank" rel="noopener">Điều Khoản Sử Dụng</a>
+                        <a class="nav-link" href="" target="_blank" rel="noopener">Terms of Service</a>
                     </li>
                     <li class="nav-item px-3">
-                        <a class="nav-link" href="" target="_blank" rel="noopener">Chính Sách Bảo Mật</a>
+                        <a class="nav-link" href="" target="_blank" rel="noopener">Privacy Policy</a>
                     </li>
                 </ul>
                 <!-- End Nav List -->
