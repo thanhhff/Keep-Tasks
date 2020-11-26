@@ -5778,6 +5778,7 @@ input[type="submit"].btn-block {
     flex: 1 1 auto;
     min-height: 1px;
     padding: 1.5rem;
+    height: 220px;
 }
 
 .card-title {
@@ -6559,14 +6560,14 @@ a.badge-navy:focus {
 
 .progress-bar-striped {
     background-image: linear-gradient(
-            45deg,
-            rgba(255, 255, 255, 0.15) 25%,
-            transparent 25%,
-            transparent 50%,
-            rgba(255, 255, 255, 0.15) 50%,
-            rgba(255, 255, 255, 0.15) 75%,
-            transparent 75%,
-            transparent
+        45deg,
+        rgba(255, 255, 255, 0.15) 25%,
+        transparent 25%,
+        transparent 50%,
+        rgba(255, 255, 255, 0.15) 50%,
+        rgba(255, 255, 255, 0.15) 75%,
+        transparent 75%,
+        transparent
     );
     background-size: 1rem 1rem;
 }
@@ -15780,9 +15781,9 @@ button:focus {
     opacity: 0;
     visibility: hidden;
     background-image: linear-gradient(
-            to right,
-            rgba(33, 50, 91, 0.9) 0,
-            rgba(33, 50, 91, 0.9) 100%
+        to right,
+        rgba(33, 50, 91, 0.9) 0,
+        rgba(33, 50, 91, 0.9) 100%
     );
     background-repeat: repeat-x;
     transition-delay: 0.5s;
@@ -23679,27 +23680,27 @@ label.btn {
 
 .gradient-y-sm-primary {
     background-image: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0) 0,
-            rgba(55, 125, 255, 0.075) 100%
+        to bottom,
+        rgba(255, 255, 255, 0) 0,
+        rgba(55, 125, 255, 0.075) 100%
     );
     background-repeat: repeat-x;
 }
 
 .gradient-y-gray {
     background-image: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0) 0,
-            rgba(231, 234, 243, 0.5) 100%
+        to bottom,
+        rgba(255, 255, 255, 0) 0,
+        rgba(231, 234, 243, 0.5) 100%
     );
     background-repeat: repeat-x;
 }
 
 .gradient-y-lg-white {
     background-image: linear-gradient(
-            to bottom,
-            rgba(255, 255, 255, 0) 0,
-            #fff 100%
+        to bottom,
+        rgba(255, 255, 255, 0) 0,
+        #fff 100%
     );
     background-repeat: repeat-x;
 }
@@ -23726,54 +23727,54 @@ label.btn {
 .gradient-x-overlay-lg-navy-video::before {
     z-index: 2;
     background-image: linear-gradient(
-            to right,
-            rgba(33, 50, 91, 0.95) 0,
-            rgba(33, 50, 91, 0.95) 100%
+        to right,
+        rgba(33, 50, 91, 0.95) 0,
+        rgba(33, 50, 91, 0.95) 100%
     );
     background-repeat: repeat-x;
 }
 
 .gradient-x-overlay-sm-navy::before {
     background-image: linear-gradient(
-            to right,
-            rgba(33, 50, 91, 0.25) 0,
-            rgba(30, 32, 34, 0.25) 100%
+        to right,
+        rgba(33, 50, 91, 0.25) 0,
+        rgba(30, 32, 34, 0.25) 100%
     );
     background-repeat: repeat-x;
 }
 
 .gradient-x-overlay-lg-navy::before {
     background-image: linear-gradient(
-            to right,
-            rgba(33, 50, 91, 0.9) 0,
-            rgba(33, 50, 91, 0.9) 100%
+        to right,
+        rgba(33, 50, 91, 0.9) 0,
+        rgba(33, 50, 91, 0.9) 100%
     );
     background-repeat: repeat-x;
 }
 
 .gradient-x-overlay-sm-indigo::before {
     background-image: linear-gradient(
-            45deg,
-            transparent,
-            rgba(45, 21, 130, 0.05)
+        45deg,
+        transparent,
+        rgba(45, 21, 130, 0.05)
     );
     background-repeat: repeat-x;
 }
 
 .gradient-y-overlay-sm-dark::before {
     background-image: linear-gradient(
-            to bottom,
-            rgba(30, 32, 34, 0.3) 0,
-            rgba(33, 50, 91, 0.2) 100%
+        to bottom,
+        rgba(30, 32, 34, 0.3) 0,
+        rgba(33, 50, 91, 0.2) 100%
     );
     background-repeat: repeat-x;
 }
 
 .gradient-y-overlay-lg-white::before {
     background-image: linear-gradient(
-            to bottom,
-            #fff 0,
-            rgba(255, 255, 255, 0.9) 100%
+        to bottom,
+        #fff 0,
+        rgba(255, 255, 255, 0.9) 100%
     );
     background-repeat: repeat-x;
 }
