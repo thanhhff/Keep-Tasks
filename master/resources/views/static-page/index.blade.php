@@ -211,7 +211,7 @@
                         <div class="card-header bg-primary text-center rounded-top">
                             <div class="avatar d-block bg-white rounded p-2 mx-auto">
                                 <img class="avatar-img"
-                                     src="https://cdn3.meistertask.com/assets/content/home/multiple-checklist-b6b21f9c364e71b08889d364fa310cdb1c47cd7d6d22a9ac18cdbe157dce64f9.svg"
+                                     src="https://cdn1.meistertask.com/assets/content/home/automation-e2d6ccc23889a22e6d120fdbf718d547ae0df70f60190493a4e1e1a969a658a8.svg"
                                      loading="lazy" width="34"
                                      height="34">
                             </div>
