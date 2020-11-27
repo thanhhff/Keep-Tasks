@@ -10,7 +10,7 @@
             :href="to"
             :title="label"
         >
-            <i :class="`fa fa-${icon}`" class="ic-icon" />
+            <i :class="`fa fa-${icon}`" class="ic-icon"/>
         </inertia-link>
     </el-tooltip>
 </template>
@@ -55,12 +55,14 @@ export default {
     width: 100%;
     padding: 0 5px;
     margin: 20px 0;
+
     &__inner {
         height: 1px;
         width: 100%;
         background: white;
     }
 }
+
 .side-item {
     display: flex;
     justify-content: center;
@@ -72,11 +74,15 @@ export default {
     border-radius: 8px;
     font-weight: bolder;
     margin: 10px auto;
-    color: white;
+    color: #ffffff;
     transition: all ease .3s;
 
     &:hover, &.active {
-        background-color: rgb(172, 148, 250);
+        background-color: #f8f9fc;
+        //color: #ffffff;
+        //border-color: #eaecf4 #eaecf4 #dddfeb;
+        //background-image: linear-gradient(180deg, #4e73df 10%, #224abe 100%);
+        color: #4e73df;
     }
 }
 </style>
