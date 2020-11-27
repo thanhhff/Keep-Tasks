@@ -8,42 +8,42 @@
 
         <div class="py-12">
             <div class="max-w-8xl mx-auto sm:px-6 lg:px-8 flex">
-               Comming Soon
+                Comming Soon
             </div>
         </div>
     </app-layout>
 </template>
 
 <script>
-    import AppLayout from './../Layouts/AppLayout'
+import AppLayout from './../Layouts/AppLayout'
 
-    export default {
-        name: "Integrations",
-        components: {
-            AppLayout
-        },
-        methods: {
-            async signIn() {
-                    this.$gapi.signIn().then(async() => {
-                    const baseGapi = await this.$gapi._load();
-                    const authInstance = baseGapi.auth2.getAuthInstance();
-                    const user = authInstance.currentUser.get();
+export default {
+    name: "Integrations",
+    components: {
+        AppLayout
+    },
+    methods: {
+        async signIn() {
+            this.$gapi.signIn().then(async () => {
+                const baseGapi = await this.$gapi._load();
+                const authInstance = baseGapi.auth2.getAuthInstance();
+                const user = authInstance.currentUser.get();
 
-                    authInstance.grantOfflineAccess({
-                        authuser: user.getAuthResponse().session_state.extraQueryParams.authuser
-                    }).then(({ code }) => {
-                        const credentials = { code };
-                        axios({
-                            url: 'services/google',
-                            method: 'post',
-                            data: credentials
-                        })
+                authInstance.grantOfflineAccess({
+                    authuser: user.getAuthResponse().session_state.extraQueryParams.authuser
+                }).then(({code}) => {
+                    const credentials = {code};
+                    axios({
+                        url: 'services/google',
+                        method: 'post',
+                        data: credentials
                     })
-
                 })
-            }
+
+            })
         }
     }
+}
 </script>
 
 <style lang="scss">

@@ -32,7 +32,7 @@
 
                 <el-dropdown trigger="click" @command="($event) => handleCommand(board, $event)" @click.native.prevent>
                     <div class="hover:bg-gray-200 w-5 rounded-full py-2 text-center">
-                     <i class="fa fa-ellipsis-v"></i>
+                        <i class="fa fa-ellipsis-v"></i>
                     </div>
                     <el-dropdown-menu slot="dropdown">
                         <el-dropdown-item command="delete" icon="fa fa-trash">Delete</el-dropdown-item>
@@ -124,7 +124,7 @@ export default {
                     this.confirmDelete(board)
                     break
                 default:
-                break;
+                    break;
             }
         },
 
@@ -154,7 +154,7 @@ export default {
                     }
                     return this.$inertia.visit('dashboard')
                 }
-                 this.$inertia.reload();
+                this.$inertia.reload();
             }).catch((err) => {
                 console.log(err)
             });
@@ -165,9 +165,11 @@ export default {
 
 <style lang="scss">
 .board-side {
-    border-radius: 18px 0 0 0;
+    //border-radius: 18px 0 0 0;
     height: 100%;
+    //background-color: #4e73df;
 }
+
 .board-item {
     @apply my-2 border-l-4 border-white;
 
