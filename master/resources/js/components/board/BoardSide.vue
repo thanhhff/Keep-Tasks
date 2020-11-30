@@ -7,10 +7,10 @@
             <input
                 type="search"
                 class="w-full p-2"
-                placeholder="search boards..."
+                placeholder="Search boards..."
             />
-            <button class="bg-purple-400 text-white p-2">
-                Search
+            <button class="btn btn-primary">
+                <i class="fas fa-search fa-sm"></i>
             </button>
         </div>
 
@@ -178,11 +178,11 @@ export default {
     }
 
     &.active {
-        @apply border-purple-400 bg-purple-50;
+        @apply border-green-400 bg-green-50;
     }
 
     &__avatar {
-        @apply bg-purple-400 flex justify-center items-center;
+        @apply bg-blue-400 flex justify-center items-center;
         width: 30px;
         min-width: 30px;
         font-size: 20px;
@@ -192,5 +192,30 @@ export default {
         margin-right: 4px;
         color: white;
     }
+}
+
+.btn {
+    display: inline-block;
+    //font-weight: 400;
+    color: #858796;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: transparent;
+    border: 1px solid transparent;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    //border-radius: 0.35rem;
+    transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #76a9fa;
+    //border-color: #4e73df;
 }
 </style>
