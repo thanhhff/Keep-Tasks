@@ -7,8 +7,9 @@
             <input
                 type="search"
                 class="w-full p-2"
-                placeholder="Search boards..."
+                placeholder="Search..."
             />
+
             <button class="btn btn-primary">
                 <i class="fas fa-search fa-sm"></i>
             </button>
