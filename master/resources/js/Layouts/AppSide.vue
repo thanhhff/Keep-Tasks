@@ -1,7 +1,7 @@
 <template>
     <div class="app-side">
         <div class="logo-side">
-            <img src="https://imgur.com/mggFBED.png" alt="Keep Tasks" loading="lazy">
+            <img src="https://i.imgur.com/mggFBED.png" alt="Keep Tasks" loading="lazy">
         </div>
         <div
             class="nav flex-column nav-pills"
