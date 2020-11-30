@@ -16,29 +16,16 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0f0210b9-d6ed-4e09-9e6a-5ecf1bf2efb4" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/master/resources/js/Layouts/AppSide-2.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/master/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/master/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/public/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/master/public/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/css/app.css" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/css/app.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/AppClock.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/AppClock.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/AppLayout.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/AppLayout.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/AppSide.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/AppSide.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/AppSideItem.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/AppSideItem.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/AppSideItemGroup.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/AppSideItemGroup.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/layout/AppHeader.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/layout/AppHeader.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/layout/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/layout/index.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/menus/daily/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/menus/daily/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Layouts/menus/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Layouts/menus/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/Pages/Blank.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/Pages/Blank.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/app.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/master/resources/js/components/board/BoardSide.vue" beforeDir="false" afterPath="$PROJECT_DIR$/master/resources/js/components/board/BoardSide.vue" afterDir="false" />
-    </list>
+    <list default="true" id="0f0210b9-d6ed-4e09-9e6a-5ecf1bf2efb4" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -49,6 +36,11 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -199,6 +191,7 @@
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -244,7 +237,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
@@ -287,6 +292,10 @@
       <screen x="0" y="23" width="1440" height="831" />
     </state>
     <state width="1398" height="267" key="GridCell.Tab.1.right/0.23.1440.831/1440.23.1440.877@0.23.1440.831" timestamp="1602659386051" />
+    <state x="342" y="154" key="git4idea.branch.GitSmartOperationDialog" timestamp="1606709986838">
+      <screen x="0" y="25" width="1440" height="824" />
+    </state>
+    <state x="342" y="154" key="git4idea.branch.GitSmartOperationDialog/0.25.1440.824@0.25.1440.824" timestamp="1606709986838" />
     <state x="385" y="174" width="670" height="677" key="search.everywhere.popup" timestamp="1606450293477">
       <screen x="0" y="25" width="1440" height="826" />
     </state>
