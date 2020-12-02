@@ -9,7 +9,6 @@
                 class="w-full p-2"
                 placeholder="Search..."
             />
-            <!--            <button class="btn btn-primary bg-blue-400 text-white p-2">-->
             <button class="btn-primary">
                 <i class="fas fa-search fa-sm"></i>
             </button>
