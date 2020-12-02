@@ -404,10 +404,10 @@
          style="background-image: url(assets/front/images/abstract-shapes-5.svg);">
         <div class="container space-2">
             <div class="mb-5">
-                <h2 class="text-white">Contact Us</h2>
+                <h2 class="text-white">Got a question?</h2>
             </div>
             <a class="btn btn-light transition-3d-hover" href="https://www.facebook.com/thanhhff/" target="_blank"
-               rel="noopener nofollow">Liên Hệ</a>
+               rel="noopener nofollow">Contact Us</a>
         </div>
     </div>
     <!-- End CTA Section -->
