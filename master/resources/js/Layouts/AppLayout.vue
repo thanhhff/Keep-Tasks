@@ -9,7 +9,7 @@
                             <!-- Logo -->
                             <div class="flex-shrink-0 flex items-center">
                                 <a href="/dashboard">
-                                    Keep Tasks 
+                                    Keep Tasks
                                 </a>
                             </div>
                         </div>
