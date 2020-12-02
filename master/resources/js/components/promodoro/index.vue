@@ -7,7 +7,7 @@
             <span> Promodoro </span>
             <div class="flex">
                 <div class="actions rounded-lg flex h-8"
-                :class="`bg-${promodoroColor}-700`"
+                     :class="`bg-${promodoroColor}-700`"
                 >
                     <button
                         v-for="(mode, key) in modes"
@@ -24,9 +24,12 @@
                 </button>
             </div>
         </header>
+
         <div class="clock" :class="{ rest: round, ticking: run == 1 }">
-            <time class="time">{{ formattedTime }}</time
-            ><span class="note">click here to {{ message }}</span
+            <time class="time">{{ formattedTime }}
+            </time
+            >
+            <span class="note">click here to {{ message }}</span
             ><span>{{ modes[modeSelected].name }}</span>
             <div class="inner-controls" @click="play">
                 <i class="material-icons">{{ icon }}</i>
@@ -56,7 +59,7 @@
 </template>
 
 <script>
-const time = { minutes: 0, seconds: 10 };
+const time = {minutes: 0, seconds: 10};
 
 import Tracker from "../timeTracker/tracker";
 import PromodoroConfigurationModal from "./Configuration"
@@ -138,7 +141,7 @@ export default {
         },
 
         formattedTime() {
-            let { minutes, seconds } = this.time;
+            let {minutes, seconds} = this.time;
             seconds = seconds < 10 ? (seconds = "0" + seconds) : seconds;
             minutes = minutes < 10 ? (minutes = "0" + minutes) : minutes;
             return `${minutes}:${seconds}`;
@@ -275,8 +278,8 @@ export default {
 
         addTime(property) {
             const self = this;
-            this.modes[property].minutes = Number(this.modes[property].minutes ) + 1;
-            const { minutes, seconds} = this.modes[property]
+            this.modes[property].minutes = Number(this.modes[property].minutes) + 1;
+            const {minutes, seconds} = this.modes[property]
 
             if (property == "session" && this.round == 0) {
                 self.updateTime(minutes, seconds);
@@ -290,9 +293,9 @@ export default {
         removeTime(property) {
             const self = this;
             if (this.modes[property].minutes > 0) {
-                this.modes[property].minutes-=1;
+                this.modes[property].minutes -= 1;
             }
-            const { minutes, seconds} = this.modes[property]
+            const {minutes, seconds} = this.modes[property]
 
             if (property == "session" && this.round == 0) {
                 self.updateTime(minutes, seconds);
@@ -349,6 +352,7 @@ export default {
     position: relative;
 }
 
+
 .clock:hover {
     box-shadow: 3px 4px 5px rgba(0, 0, 0, 0.2);
 }
@@ -380,7 +384,7 @@ export default {
 }
 
 .time {
-    font-size: 90px;
+    font-size: 6vw;
 }
 
 .inner-controls {
