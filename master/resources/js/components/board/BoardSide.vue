@@ -7,10 +7,11 @@
             <input
                 type="search"
                 class="w-full p-2"
-                placeholder="search boards..."
+                placeholder="Search..."
             />
-            <button class="bg-purple-400 text-white p-2">
-                Search
+            <!--            <button class="btn btn-primary bg-blue-400 text-white p-2">-->
+            <button class="btn-primary">
+                <i class="fas fa-search fa-sm"></i>
             </button>
         </div>
 
@@ -45,7 +46,7 @@
             v-if="!showAdd"
         >
             <button
-                class="flex justify-center items-center px-2 h-10 w-full border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                class="flex justify-center items-center px-2 h-10 w-full border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
                 @click="showAddForm"
             >
                 <i class="fa fa-plus"></i>
@@ -65,10 +66,10 @@
                 @blur="showAdd = false"
             />
             <button
-                class="bg-purple-400 text-white p-2"
+                class="btn-primary"
                 @click.native="addBoard()"
             >
-                Add
+                <i class="fa fa-plus"></i>
             </button>
         </div>
     </div>
@@ -164,8 +165,16 @@ export default {
 </script>
 
 <style lang="scss">
+
+.btn-primary {
+    color: #fff;
+    background-color: #76a9fa;
+    border-color: #4e73df;
+    border-radius: 0.35rem;
+    padding: 0.375rem 0.75rem;
+}
+
 .board-side {
-    //border-radius: 18px 0 0 0;
     height: 100%;
     //background-color: #4e73df;
 }
@@ -178,11 +187,11 @@ export default {
     }
 
     &.active {
-        @apply border-purple-400 bg-purple-50;
+        @apply border-blue-400 bg-blue-50;
     }
 
     &__avatar {
-        @apply bg-purple-400 flex justify-center items-center;
+        @apply bg-blue-400 flex justify-center items-center;
         width: 30px;
         min-width: 30px;
         font-size: 20px;
