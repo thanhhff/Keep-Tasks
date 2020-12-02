@@ -1,9 +1,9 @@
 <template>
-  <div>
-    <div
-        class="block link"
-        v-for="link in links"
-        :key="link.id"
+    <div>
+        <div
+            class="block link"
+            v-for="link in links"
+            :key="link.id"
         >
             <a
                 class="link__caller"
@@ -12,12 +12,17 @@
                 :title="link.title">
                 {{ link.title }}
             </a>
+
             <div class="tooltip">
-                <button class="link__buttons edit hover:text-green-400 font-bold" @click.prevent.stop="$emit('edit', link)"> Edit</button>
-                <button class="link__buttons delete hover:text-red-400 font-bold"  @click.prevent.stop="deleteLink(link)"> Delete</button>
+                <button class="link__buttons edit hover:text-green-400 font-bold"
+                        @click.prevent.stop="$emit('edit', link)"> Edit
+                </button>
+                <button class="link__buttons delete hover:text-red-400 font-bold"
+                        @click.prevent.stop="deleteLink(link)"> Delete
+                </button>
             </div>
-      </div>
-  </div>
+        </div>
+    </div>
 </template>
 
 <script>
