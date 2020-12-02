@@ -6,19 +6,42 @@
         >
             <span> Promodoro </span>
             <div class="flex">
-                <div class="actions rounded-lg flex h-8"
-                     :class="`bg-${promodoroColor}-700`"
-                >
-                    <button
-                        v-for="(mode, key) in modes"
-                        :key="key"
-                        class="px-2 h-full rounded-lg"
-                        :class="{ [`bg-${promodoroColor}-100 text-${promodoroColor}-700`]: modeSelected == key }"
-                        @click="setMode(key)"
-                    >
-                        {{ mode.name }}
+<!--                <div class="actions rounded-lg flex h-8"-->
+<!--                     :class="`bg-${promodoroColor}-700`"-->
+<!--                >-->
+<!--                                        <button-->
+<!--                                            v-for="(mode, key) in modes"-->
+<!--                                            :key="key"-->
+<!--                                            class="px-2 h-full rounded-lg"-->
+<!--                                            :class="{ [`bg-${promodoroColor}-100 text-${promodoroColor}-700`]: modeSelected == key }"-->
+<!--                                            @click="setMode(key)"-->
+<!--                                        >-->
+<!--                                            {{ mode.name }}-->
+<!--                                        </button>-->
+
+
+<!--                </div>-->
+
+                <div class="dropdown" style="float:right;">
+                    <button class="dropbtn">
+                        <i class="fa fa-bars" :class="`bg-${promodoroColor}-400`"></i>
                     </button>
+
+                    <div class="dropdown-content" >
+                        <a
+                            v-for="(mode, key) in modes"
+                            :key="key"
+                            :class="{ [`bg-${promodoroColor}-100 text-${promodoroColor}-700`]: modeSelected == key }"
+                            @click="setMode(key)"
+                        >
+                            {{ mode.name }}
+                        </a>
+
+
+                    </div>
                 </div>
+
+
                 <button @click="toggleConfiguration" class="ml-2" title="Promodoro configuration">
                     <i class="fa fa-cog"></i>
                 </button>
@@ -481,5 +504,49 @@ export default {
 
 .promodoro__footer {
     @apply bg-transparent text-white font-bold flex justify-between w-full items-center py-2 px-4;
+}
+</style>
+
+<style>
+.dropbtn {
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: white;
 }
 </style>
