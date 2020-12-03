@@ -17,6 +17,7 @@
                                     v-model="selectedStage"
                                     ref="input"
                                     :show-labels="false"
+                                    placeholder="Filter by stage"
                                     :options="stages"
                                     class="w-full"
                                 >
@@ -286,7 +287,7 @@ export default {
             const inbox = this.selectedStage
                 ? this.todo.filter(item => item.stage == this.selectedStage)
                 : this.todo;
-            return orderBy(this.todo, ["priority", "stage", "title"]);
+            return orderBy(inbox,["priority", "stage", "title"]);
         }
     },
     mounted() {
