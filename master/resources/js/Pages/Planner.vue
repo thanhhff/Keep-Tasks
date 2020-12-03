@@ -49,11 +49,7 @@
                             </button>
                         </header>
                         <div class="body text-gray-600">
-                            <link-viewer
-                                :links="links"
-                                @edit="openLinkForm"
-
-                            ></link-viewer>
+                            <!--                           #TODO -->
                         </div>
                     </div>
                     <div class="section-card committed mt-5">
@@ -66,11 +62,11 @@
                             </button>
                         </header>
                         <div class="body text-gray-600">
-                            <link-viewer
-                                :links="links"
-                                @edit="openLinkForm"
+                            <!--                            <link-viewer-->
+                            <!--                                :links="links"-->
+                            <!--                                @edit="openLinkForm"-->
 
-                            ></link-viewer>
+                            <!--                            ></link-viewer>-->
                         </div>
                     </div>
                     <div class="section-card committed mt-5">
@@ -83,11 +79,11 @@
                             </button>
                         </header>
                         <div class="body text-gray-600">
-                            <link-viewer
-                                :links="links"
-                                @edit="openLinkForm"
+<!--                            <link-viewer-->
+                            <!--                                :links="links"-->
+                            <!--                                @edit="openLinkForm"-->
 
-                            ></link-viewer>
+                            <!--                            ></link-viewer>-->
                         </div>
                     </div>
                     <div class="section-card committed mt-5">
@@ -100,11 +96,11 @@
                             </button>
                         </header>
                         <div class="body text-gray-600">
-                            <link-viewer
-                                :links="links"
-                                @edit="openLinkForm"
+<!--                            <link-viewer-->
+                            <!--                                :links="links"-->
+                            <!--                                @edit="openLinkForm"-->
 
-                            ></link-viewer>
+                            <!--                            ></link-viewer>-->
                         </div>
                     </div>
 
