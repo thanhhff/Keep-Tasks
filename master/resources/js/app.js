@@ -1,15 +1,14 @@
-require('./bootstrap');
-require('vue-multiselect/dist/vue-multiselect.min.css')
+require("./bootstrap");
+require("vue-multiselect/dist/vue-multiselect.min.css")
 
-import Vue from 'vue';
+import Vue from "vue";
 
-import BootstrapVue from 'bootstrap-vue' //Importing
-Vue.use(BootstrapVue) // Telling Vue to use this in whole application
 
-import {InertiaApp} from '@inertiajs/inertia-vue';
-import {InertiaForm} from 'laravel-jetstream';
+// import { InertiaProgress } from "@inertiajs/progress";
+import { InertiaApp } from "@inertiajs/inertia-vue";
+import { InertiaForm } from "laravel-jetstream";
 import ConfirmModalMixin from "./plugins/ConfirmModalMixin";
-import VueGoogleApi from 'vue-google-api'
+import VueGoogleApi from "vue-google-api"
 import VCalendar from "v-calendar";
 import "./plugins/element-ui";
 
