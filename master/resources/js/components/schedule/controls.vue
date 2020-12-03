@@ -141,7 +141,7 @@ $primary-color: var(--primary-color);
   display: none;
 
   &:hover {
-    @apply text-purple-400;
+    @apply text-blue-400;
   }
 }
 
@@ -153,7 +153,7 @@ $primary-color: var(--primary-color);
 }
 
 .selected-day {
-  @apply visible text-purple-400 shadow-lg border-purple-400 border-2;
+  @apply visible text-blue-400 shadow-lg border-blue-400 border-2;
   display: block;
 }
 
