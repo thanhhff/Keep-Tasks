@@ -41,13 +41,13 @@
                                     </template>
                                 </multiselect>
                             </div>
-                            <div class="controls h-10 bg-purple-700 rounded-lg">
+                            <div class="controls h-10 bg-blue-700 rounded-lg">
                                 <button
                                     v-for="mode in modes"
                                     :key="mode"
                                     @click="modeSelected = mode"
                                     :class="{
-                                        'bg-purple-400': mode == modeSelected
+                                        'bg-blue-400': mode == modeSelected
                                     }"
                                     class="px-8 h-full rounded-lg text-white capitalize"
                                 >
@@ -59,7 +59,7 @@
 
                     <board-item-container
                         v-show="showCommitted"
-                        title="Commited"
+                        title="Committed"
                         :tasks="committed"
                         @update-item="updateItem"
                     >
