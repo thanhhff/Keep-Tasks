@@ -17,12 +17,12 @@
             <div class="mt-10 items-container">
                 <div class="items-container__header flex justify-between px-8 mb-10">
                         <span class="text-3xl font-bold"> Time entries </span>
-                        <div class="controls bg-purple-700 rounded-lg">
+                        <div class="controls h-10 bg-blue-700 rounded-lg">
                             <button
                                 v-for="mode in modes"
                                 :key="mode"
                                 @click="modeSelected=mode"
-                                :class="{'bg-purple-400': mode == modeSelected }"
+                                :class="{'bg-blue-400': mode == modeSelected }"
                                 class="px-8 h-full rounded-lg text-white capitalize">
                                     {{ mode }}
                             </button>

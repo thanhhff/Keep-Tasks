@@ -403,7 +403,7 @@ export default {
     z-index: 1000;
     will-change: transform;
     .item-group-row__header {
-        border-top: 2px solid purple;
+        border-top: 2px solid blue;
         height: 50px;
         width: 100%;
         background: white;

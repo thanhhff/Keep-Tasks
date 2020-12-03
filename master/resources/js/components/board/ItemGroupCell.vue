@@ -291,7 +291,7 @@ export default {
     margin: 0 2px;
 
     &.editable-mode {
-        @apply border-purple-300 border-2;
+        @apply border-blue-300 border-2;
     }
 
     .new-item-button {

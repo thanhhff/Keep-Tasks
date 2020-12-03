@@ -143,7 +143,7 @@ export default {
             transition: all ease .5s;
             cursor: pointer;
             &:hover {
-                @apply text-purple-400;
+                @apply text-blue-400;
             }
         }
 

@@ -104,7 +104,7 @@
 
             <div class="w-full flex justify-center py-5" v-if="modeSelected == 'list'">
                 <button
-                    class="rounded-full flex justify-center items-center px-2 h-8 w-8 border-2 border-purple-400 text-purple-400 hover:bg-purple-400 hover:text-white"
+                    class="rounded-full flex justify-center items-center px-2 h-8 w-8 border-2 border-blue-400 text-blue-400 hover:bg-blue-400 hover:text-white"
                     @click="addStage()"
                 >
                     <i class="fa fa-plus"></i>
