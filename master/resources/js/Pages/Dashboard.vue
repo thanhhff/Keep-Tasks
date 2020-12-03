@@ -41,6 +41,7 @@
                                     </template>
                                 </multiselect>
                             </div>
+
                             <div class="controls h-10 bg-blue-700 rounded-lg">
                                 <button
                                     v-for="mode in modes"
