@@ -4,24 +4,8 @@
             class=" text-white font-bold flex justify-between w-full items-center py-2"
             :class="`bg-${promodoroColor}-400`"
         >
-            <span> Promodoro </span>
+            <span> Pomodoro </span>
             <div class="flex">
-<!--                <div class="actions rounded-lg flex h-8"-->
-<!--                     :class="`bg-${promodoroColor}-700`"-->
-<!--                >-->
-<!--                                        <button-->
-<!--                                            v-for="(mode, key) in modes"-->
-<!--                                            :key="key"-->
-<!--                                            class="px-2 h-full rounded-lg"-->
-<!--                                            :class="{ [`bg-${promodoroColor}-100 text-${promodoroColor}-700`]: modeSelected == key }"-->
-<!--                                            @click="setMode(key)"-->
-<!--                                        >-->
-<!--                                            {{ mode.name }}-->
-<!--                                        </button>-->
-
-
-<!--                </div>-->
-
                 <div class="dropdown" style="float:right;">
                     <button class="dropbtn">
                         <i class="fa fa-bars" :class="`bg-${promodoroColor}-400`"></i>
