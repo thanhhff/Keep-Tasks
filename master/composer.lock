@@ -2799,7 +2799,6 @@
                 "shasum": ""
             },
             "require": {
-                "ext-mailparse": "*",
                 "php": "^7.2"
             },
             "replace": {
@@ -7808,8 +7807,7 @@
     "prefer-stable": true,
     "prefer-lowest": false,
     "platform": {
-        "php": "^7.3",
-        "ext-mailparse": "*"
+        "php": "^7.3"
     },
     "platform-dev": []
 }
