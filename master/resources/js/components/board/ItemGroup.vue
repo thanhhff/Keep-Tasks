@@ -27,8 +27,8 @@
                         </div>
 
                         <span v-if="!isExpanded"> ({{ items.length }} items) </span>
-                        <i class="fa fa-edit mx-2"  @click="toggleEditMode(true)"></i>
-                        <el-dropdown trigger="click" @command="handleBoardCommands" @click.native.prevent>
+                        <i class="fa fa-edit mx-2" @click="toggleEditMode(true)"></i>
+                        <el-dropdown trigger="click" @command="($event) => handleBoardCommands(field, $event)" @click.native.prevent>
                             <div class="hover:bg-gray-200 w-5 rounded-full py-2 text-center h-full flex justify-center">
                                 <div class="flex items-center justify-center">
                                     <i class="fa fa-ellipsis-v"></i>
@@ -46,7 +46,8 @@
 
                 <div class="bg-red-500 grid" v-if="isExpanded">
                     <draggable v-model="stage.items" @end="saveReorder" handle=".handle" class="w-full">
-                        <div :class="`item-false bg-gray-200 border-2 border-white flex`" v-for="(item, index) in stage.items" :key="`item-false__title-${item.id}`">
+                        <div :class="`item-false bg-gray-200 border-2 border-white flex`"
+                             v-for="(item, index) in stage.items" :key="`item-false__title-${item.id}`">
                             <div
                                 v-if="isSelectMode"
                                 class="item-checkbox selection"
@@ -57,7 +58,8 @@
                                 v-else
                                 class="item-checkbox"
                             >
-                                <input type="checkbox" name="" id="" v-model="item.done" @change="saveChanges(item, 'done', item.done)" :disabled="item.commit_date"/>
+                                <input type="checkbox" name="" id="" v-model="item.done"
+                                       @change="saveChanges(item, 'done', item.done)" :disabled="item.commit_date"/>
                             </div>
                             <div class="flex items-center">
                                 <i class="fa fa-align-justify handle"></i>
@@ -72,8 +74,10 @@
                                 @saved="saveChanges(item, 'title', $event)"
                             >
                             </item-group-cell>
-                            <el-dropdown trigger="click" @command="($event) => handleCommand(item, $event)" @click.native.prevent>
-                                <div class="hover:bg-gray-200 w-5 rounded-full py-2 text-center h-full flex justify-center">
+                            <el-dropdown trigger="click" @command="($event) => handleCommand(item, $event)"
+                                         @click.native.prevent>
+                                <div
+                                    class="hover:bg-gray-200 w-5 rounded-full py-2 text-center h-full flex justify-center">
                                     <div class="flex items-center mr-2">
                                         <i class="fa fa-ellipsis-v"></i>
                                     </div>
@@ -179,6 +183,7 @@
 import ItemGroupCell from "./ItemGroupCell";
 import Draggable from "vuedraggable";
 import FieldPopover from './FieldPopover.vue';
+
 export default {
     components: {
         ItemGroupCell,
@@ -279,7 +284,7 @@ export default {
         },
         onFieldAdded() {
             this.newField = {}
-            this.$inertia.reload({ preserveScroll: true });
+            this.$inertia.reload({preserveScroll: true});
         },
         saveChanges(item, field, value) {
             item[field] = value;
@@ -302,12 +307,21 @@ export default {
                 item.order = index;
                 this.$emit("saved", {...item}, false);
             })
-            this.$inertia.reload({ preserveScroll: true })
+            this.$inertia.reload({preserveScroll: true})
         },
-        handleBoardCommands(command) {
+        handleBoardCommands(field, command) {
             switch (command) {
                 case 'delete':
-                    this.$emit('board-deleted', item)
+                    this.showConfirm(
+                        {
+                            title: `Delete this handle board`,
+                            content: "Are you sure you want to delete this handle board?",
+                            confirmationButtonText: "Yes, delete",
+                            confirm: () => {
+                                this.$emit('board-deleted', field);
+                            }
+                        }
+                    )
                     break
                 case 'edit':
                     this.toggleEditMode();
@@ -340,21 +354,27 @@ export default {
     @apply flex items-center pl-2 ;
     height: 34px;
 }
+
 .item-line-cell {
     min-height: 35px;
 }
+
 .item-group {
     overflow: auto;
 }
+
 .ic-list__title, .item-group, .ic-list__add {
     position: relative;
 }
+
 .ic-list {
     overflow: hidden;
+
     &__body {
         display: grid;
         grid-template-columns: 1fr 1fr 80px;
         position: relative;
+
         &.not-expanded {
             @apply bg-gray-200;
             width: 100%;
@@ -362,38 +382,46 @@ export default {
         }
     }
 }
+
 .item-group-row {
     grid-template-columns: repeat(var(--board-column-size), minmax(180px, 100%));
+
     &__header {
         @apply text-center;
         height: 34px;
     }
 }
+
 .item-checkbox {
     @apply bg-gray-300 mr-2 flex items-center px-2;
     &.selection {
         @apply bg-blue-400;
     }
 }
+
 .item-false {
     @apply bg-gray-200;
     height: 44px;
     width: 100%;
     border: 2px solid white;
+
     &__header {
         @apply text-center font-bold;
         height: 34px;
         margin: 4px;
     }
 }
+
 .false-header {
     height: 34px;
     margin: 4px;
     display: none;
+
     &.active {
         display: block;
     }
 }
+
 .sticky-active {
     position: absolute;
     left: 0;
@@ -403,6 +431,7 @@ export default {
     height: 50px;
     z-index: 1000;
     will-change: transform;
+
     .item-group-row__header {
         border-top: 2px solid purple;
         height: 50px;
@@ -411,10 +440,12 @@ export default {
         display: flex;
         justify-content: center;
         align-items: center;
+
         &.header-cell {
             justify-content: left;
         }
     }
+
     &.item-false__header {
         margin-left: 0;
         display: flex;
