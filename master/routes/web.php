@@ -45,7 +45,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     // Apps
     Route::get('/notes', [DashboardController::class, 'blank'])->name('blank');
-    Route::get('/reports', [DashboardController::class, 'blank'])->name('blank');
+    Route::get('/reports', [DashboardController::class, 'report'])->name('report');
 
     // footer
     Route::get('/help', [DashboardController::class, 'blank'])->name('blank');
