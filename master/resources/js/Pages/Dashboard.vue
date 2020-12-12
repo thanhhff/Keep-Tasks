@@ -7,7 +7,9 @@
                 <!-- Main board -->
                 <div class="w-100 md:w-9/12 md:mx-4 pt-12">
                     <div
-                        class="flex justify-between flex-col md:flex-row mx-2 md:mr-2 md:ml-0"
+                        class="flex justify-between flex-col md:flex-row mx-2 md:mr-2 md:ml-0" style="
+    align-items: center;
+"
                     >
                         <span class="text-3xl font-bold"> Today's Todos </span>
 
@@ -42,18 +44,36 @@
                                 </multiselect>
                             </div>
 
-                            <div class="controls h-10 bg-blue-700 rounded-lg">
-                                <button
-                                    v-for="mode in modes"
-                                    :key="mode"
-                                    @click="modeSelected = mode"
-                                    :class="{
-                                        'bg-blue-400': mode == modeSelected
-                                    }"
-                                    class="px-8 h-full rounded-lg text-white capitalize"
-                                >
-                                    {{ mode }}
+                            <!--                                                        <div class="controls h-10 bg-blue-700 rounded-lg">-->
+                            <!--                                                            <button-->
+                            <!--                                                                v-for="mode in modes"-->
+                            <!--                                                                :key="mode"-->
+                            <!--                                                                @click="modeSelected = mode"-->
+                            <!--                                                                :class="{-->
+                            <!--                                                                    'bg-blue-400': mode == modeSelected-->
+                            <!--                                                                }"-->
+
+                            <!--                                                                class="px-8 h-full rounded-lg text-white capitalize"-->
+                            <!--                                                            >-->
+                            <!--                                                                {{ mode }}-->
+                            <!--                                                            </button>-->
+                            <!--                                                        </div>-->
+
+                            <div class="dropdown" style="float:right;">
+                                <button class="dropbtn">
+                                    <i class="fa fa-bars bg-blue-400"></i>
                                 </button>
+
+                                <div class="dropdown-content">
+                                    <a
+                                        v-for="mode in modes"
+                                        :key="mode"
+                                        @click="modeSelected = mode"
+                                        :class="{'bg-blue-400': mode == modeSelected}"
+                                    >
+                                        {{ mode }}
+                                    </a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -111,29 +131,29 @@
                         </div>
                     </div>
 
-<!--                    <div class="section-card committed mt-5">-->
-<!--                        <header-->
-<!--                            class="bg-blue-400 text-white font-bold flex justify-between"-->
-<!--                        >-->
-<!--                            <span>-->
-<!--                                Notes-->
-<!--                            </span>-->
-<!--                            <button-->
-<!--                                class="bg-transparent text-white"-->
-<!--                                @click="isNoteFormOpen = !isNoteFormOpen"-->
-<!--                            >-->
-<!--                                <i class="fa fa-plus"></i>-->
-<!--                            </button>-->
-<!--                        </header>-->
-<!--                        <div class="body text-gray-600">-->
+                    <!--                    <div class="section-card committed mt-5">-->
+                    <!--                        <header-->
+                    <!--                            class="bg-blue-400 text-white font-bold flex justify-between"-->
+                    <!--                        >-->
+                    <!--                            <span>-->
+                    <!--                                Notes-->
+                    <!--                            </span>-->
+                    <!--                            <button-->
+                    <!--                                class="bg-transparent text-white"-->
+                    <!--                                @click="isNoteFormOpen = !isNoteFormOpen"-->
+                    <!--                            >-->
+                    <!--                                <i class="fa fa-plus"></i>-->
+                    <!--                            </button>-->
+                    <!--                        </header>-->
+                    <!--                        <div class="body text-gray-600">-->
 
-<!--                            <note-viewer-->
-<!--                                :notes="notes"-->
-<!--                                @edit="openNoteForm"-->
-<!--                            ></note-viewer>-->
+                    <!--                            <note-viewer-->
+                    <!--                                :notes="notes"-->
+                    <!--                                @edit="openNoteForm"-->
+                    <!--                            ></note-viewer>-->
 
-<!--                        </div>-->
-<!--                    </div>-->
+                    <!--                        </div>-->
+                    <!--                    </div>-->
 
                     <!--Pomodoro-->
                     <div class="section-card committed mt-5">
@@ -307,8 +327,7 @@ export default {
         localCommitDate(newDate, oldDate) {
             if (
                 oldDate &&
-                newDate.toISOString().slice(0, 10) !=
-                oldDate.toISOString().slice(0, 10)
+                newDate.toISOString().slice(0, 10) != oldDate.toISOString().slice(0, 10)
             ) {
                 this.getCommitsByDate();
             }
@@ -349,7 +368,7 @@ export default {
                 date = this.commitDate.split("-");
                 date = toDate(new Date(date[0], date[1] - 1, date[2]));
             }
-            this.localCommitDate = date;
+            // this.localCommitDate = date;
         },
 
         completeDay() {
