@@ -355,15 +355,15 @@ export default {
 }
 
 .card {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    min-width: 0;
-    word-wrap: break-word;
-    background-color: #fff;
-    background-clip: border-box;
-    border: 1px solid #e3e6f0;
-    border-radius: 0.35rem;
+    //position: relative;
+    //display: flex;
+    //flex-direction: column;
+    //min-width: 0;
+    //word-wrap: break-word;
+    //background-color: #fff;
+    //background-clip: border-box;
+    ////border: 1px solid #e3e6f0;
+    //border-radius: 0.35rem;
 }
 
 .shadow {
