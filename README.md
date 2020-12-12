@@ -22,7 +22,7 @@ node -v
 2. Clone this repo
 
 ```shell
-$ git clone https://github.com/jesusantguerrero/sunday.git
+$ git clone https://github.com/thanhhff/Keep-Tasks.git
 
 ```
 ### Setup
