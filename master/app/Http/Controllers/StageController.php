@@ -69,7 +69,7 @@ class StageController extends Controller
     public function destroy($id)
     {
         $stage = Stage::find($id);
-        $stage->deleteStages();
+//        $stage->deleteItems();
         $stage->delete();
         return $stage;
     }

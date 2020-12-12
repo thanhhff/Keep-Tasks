@@ -28,7 +28,7 @@
 
                         <span v-if="!isExpanded"> ({{ items.length }} items) </span>
                         <i class="fa fa-edit mx-2" @click="toggleEditMode(true)"></i>
-                        <el-dropdown trigger="click" @command="($event) => handleBoardCommands(field, $event)" @click.native.prevent>
+                        <el-dropdown trigger="click" @command="($event) => handleBoardCommands(stage, $event)" @click.native.prevent>
                             <div class="hover:bg-gray-200 w-5 rounded-full py-2 text-center h-full flex justify-center">
                                 <div class="flex items-center justify-center">
                                     <i class="fa fa-ellipsis-v"></i>
@@ -309,19 +309,10 @@ export default {
             })
             this.$inertia.reload({preserveScroll: true})
         },
-        handleBoardCommands(field, command) {
+        handleBoardCommands(stage, command) {
             switch (command) {
                 case 'delete':
-                    this.showConfirm(
-                        {
-                            title: `Delete this handle board`,
-                            content: "Are you sure you want to delete this handle board?",
-                            confirmationButtonText: "Yes, delete",
-                            confirm: () => {
-                                this.$emit('board-deleted', field);
-                            }
-                        }
-                    )
+                    this.$emit('stage-deleted', stage)
                     break
                 case 'edit':
                     this.toggleEditMode();

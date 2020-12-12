@@ -46,7 +46,7 @@
                     name=""
                     id=""
                     v-model="searchOptions.search"
-                    placeholder="search"
+                    placeholder="Search"
                 />
                 <span class="ml-2 toolbar-buttons">
                     <i class="fa fa-user"></i>
@@ -87,6 +87,7 @@
                         @open-item="openItem"
                         @item-deleted="confirmDeleteItem"
                         @stage-updated="addStage"
+                        @stage-deleted="confirmDeleteStage"
                         class="mt-10"
                     >
                     </item-group>
@@ -112,19 +113,42 @@
             </div>
         </div>
 
-        <!-- Delete Team Confirmation Modal -->
+        <!-- Delete Stage Confirmation Modal -->
+        <jet-confirmation-modal
+            :show="stageToDelete"
+            @close="stageToDelete = false"
+        >
+            <template #title>Delete Stage</template>
+
+            <template #content>
+                Are you sure you want to delete this Stage?
+            </template>
+
+            <template #footer>
+                <jet-secondary-button @click.native="stageToDelete = false">
+                    Nevermind
+                </jet-secondary-button>
+
+                <jet-danger-button
+                    class="ml-2"
+                    @click.native="deleteStage(stageToDelete)"
+                >
+                    Delete Stage
+                </jet-danger-button>
+            </template>
+        </jet-confirmation-modal>
+
+        <!-- Delete Item Confirmation Modal -->
         <jet-confirmation-modal
             :show="itemToDelete"
             @close="itemToDelete = false"
         >
             <template #title>
-                Delete Team
+                Delete Item
             </template>
 
             <template #content>
-                Are you sure you want to delete this team? Once a team is
-                deleted, all of its resources and data will be permanently
-                deleted.
+                Are you sure you want to delete this Item?
             </template>
 
             <template #footer>
@@ -216,25 +240,26 @@ export default {
                 }
 
             },
+            stageToDelete: false,
             itemToDelete: false,
             items: [
                 {
                     title: "Test",
-                    owner: "Jesus Guerrero",
+                    owner: "Thanhhff",
                     status: "todo",
                     due_date: new Date().toISOString().slice(0, 10),
                     priority: "High"
                 },
                 {
                     title: "Test",
-                    owner: "Jesus Guerrero",
+                    owner: "Thanhhff",
                     status: "todo",
                     due_date: new Date().toISOString().slice(0, 10),
                     priority: "low"
                 },
                 {
                     title: "Test",
-                    owner: "Jesus Guerrero",
+                    owner: "Thanhhff",
                     status: "todo",
                     due_date: new Date().toISOString().slice(0, 10),
                     priority: "medium"
@@ -243,7 +268,7 @@ export default {
             comments: [],
             contacts: [
                 {
-                    name: "Jesus Guerrero"
+                    name: "Thanhhff"
                 }
             ],
             searchOptions: {
@@ -379,6 +404,25 @@ export default {
                 }
             });
         },
+
+        // Add delete stage
+        confirmDeleteStage(stage, reload = true) {
+            this.stageToDelete = stage;
+        },
+
+        deleteStage(stage, reload = true) {
+            axios({
+                url: `/stages/${stage.id}`,
+                method: "delete"
+            }).then(() => {
+                if (reload) {
+                    this.stageToDelete = false;
+                    this.$inertia.reload({ preserveScroll: true });
+                }
+            });
+        },
+
+        // End update
 
         saveReorder() {
             this.board.stages.forEach(async (stage, index) => {
