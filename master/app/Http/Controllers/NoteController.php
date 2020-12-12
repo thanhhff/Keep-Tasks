@@ -2,9 +2,12 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Board;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Models\Note;
+use Illuminate\Support\Facades\URL;
+use Inertia\Inertia;
 
 class NoteController extends Controller
 {
@@ -13,9 +16,26 @@ class NoteController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $user = $request->user();
+
+        return Inertia::render('Note', [
+            'boards' => Board::where([
+                'team_id' => $user->current_team_id,
+                'user_id' => $user->id
+            ])->get()->map(function ($board) {
+                return [
+                    'id' => $board->id,
+                    'name' => $board->name,
+                    'link' => URL::route('boards', $board),
+                ];
+            }),
+            'notes' => Note::where([
+                'team_id' => $user->current_team_id,
+                'user_id' => $user->id,
+            ])->get(),
+        ]);
     }
 
     /**

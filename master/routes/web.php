@@ -7,6 +7,7 @@ use App\Http\Controllers\FieldController;
 use App\Http\Controllers\HomeStaticController;
 use App\Http\Controllers\ItemController;
 use App\Http\Controllers\NoteController;
+use App\Http\Controllers\ReportController;
 use App\Http\Controllers\StageController;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\StandupController;
@@ -45,8 +46,8 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::get('/planner', [DashboardController::class, 'planner'])->name('planner');
 
     // Apps
-    Route::get('/notes', [DashboardController::class, 'blank'])->name('blank');
-    Route::get('/reports', [DashboardController::class, 'report'])->name('report');
+    Route::get('/notes', [NoteController::class, 'index'])->name('notes');
+    Route::get('/reports', [ReportController::class, 'index'])->name('reports');
 
     // footer
     Route::get('/help', [DashboardController::class, 'blank'])->name('blank');

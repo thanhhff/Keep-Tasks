@@ -58,7 +58,7 @@ export default {
 .note {
     font-weight: bold;
     margin: 5px;
-    display: inline-block;
+    //display: inline-block;
     transition: all ease .3s;
     position: relative;
 

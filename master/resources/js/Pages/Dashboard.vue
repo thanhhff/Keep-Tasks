@@ -111,29 +111,29 @@
                         </div>
                     </div>
 
-                    <div class="section-card committed mt-5">
-                        <header
-                            class="bg-blue-400 text-white font-bold flex justify-between"
-                        >
-                            <span>
-                                Notes
-                            </span>
-                            <button
-                                class="bg-transparent text-white"
-                                @click="isNoteFormOpen = !isNoteFormOpen"
-                            >
-                                <i class="fa fa-plus"></i>
-                            </button>
-                        </header>
-                        <div class="body text-gray-600">
+<!--                    <div class="section-card committed mt-5">-->
+<!--                        <header-->
+<!--                            class="bg-blue-400 text-white font-bold flex justify-between"-->
+<!--                        >-->
+<!--                            <span>-->
+<!--                                Notes-->
+<!--                            </span>-->
+<!--                            <button-->
+<!--                                class="bg-transparent text-white"-->
+<!--                                @click="isNoteFormOpen = !isNoteFormOpen"-->
+<!--                            >-->
+<!--                                <i class="fa fa-plus"></i>-->
+<!--                            </button>-->
+<!--                        </header>-->
+<!--                        <div class="body text-gray-600">-->
 
-                            <note-viewer
-                                :notes="notes"
-                                @edit="openNoteForm"
-                            ></note-viewer>
+<!--                            <note-viewer-->
+<!--                                :notes="notes"-->
+<!--                                @edit="openNoteForm"-->
+<!--                            ></note-viewer>-->
 
-                        </div>
-                    </div>
+<!--                        </div>-->
+<!--                    </div>-->
 
                     <!--Pomodoro-->
                     <div class="section-card committed mt-5">

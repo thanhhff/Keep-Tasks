@@ -86,22 +86,4 @@ class DashboardController extends Controller
     {
         return Inertia::render('Blank');
     }
-
-    public function report(Request $request)
-    {
-        $user = $request->user();
-
-        return Inertia::render('Report', [
-            'boards' => Board::where([
-                'team_id' => $user->current_team_id,
-                'user_id' => $user->id
-            ])->get()->map(function ($board) {
-                return [
-                    'id' => $board->id,
-                    'name' => $board->name,
-                    'link' =>  URL::route('boards', $board),
-                ];
-            }),
-        ]);
-    }
 }
