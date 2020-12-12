@@ -9,7 +9,7 @@ services:
       context: ./
       dockerfile: Dockerfile
     image: sunday
-    container_name: sunday-app
+    container_name: keeptasks-app
     restart: unless-stopped
     working_dir: /var/www/
     volumes:
@@ -21,7 +21,7 @@ services:
       - sunday
   db:
     image: mysql:5.7
-    container_name: sunday-db
+    container_name: keeptasks-db
     restart: always
     ports:
       - "3306:3306"
@@ -41,7 +41,7 @@ services:
       - sunday
   nginx:
     image: nginx:alpine
-    container_name: sunday-nginx
+    container_name: keeptasks-nginx
     restart: unless-stopped
     ports:
       - "8080:80"
