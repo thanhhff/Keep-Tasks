@@ -494,7 +494,7 @@ export default {
 <style>
 .dropbtn {
     color: white;
-    padding: 16px;
+    padding: 10px;
     font-size: 16px;
     border: none;
     cursor: pointer;
