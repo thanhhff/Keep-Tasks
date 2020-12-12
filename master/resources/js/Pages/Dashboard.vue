@@ -87,7 +87,7 @@
 
                 <!-- Right Side -->
                 <div class="w-100 md:w-3/12 md:ml-4 pt-12">
-                    <span class="text-3xl ml-2 font-bold"> Fast Access </span>
+                    <span class="text-3xl ml-2 font-bold"> Tools </span>
 
                     <div class="section-card committed mt-5">
                         <header
@@ -111,7 +111,32 @@
                         </div>
                     </div>
 
-                    <div class="section-card committed">
+                    <div class="section-card committed mt-5">
+                        <header
+                            class="bg-blue-400 text-white font-bold flex justify-between"
+                        >
+                            <span>
+                                Notes
+                            </span>
+                            <button
+                                class="bg-transparent text-white"
+                                @click="isNoteFormOpen = !isNoteFormOpen"
+                            >
+                                <i class="fa fa-plus"></i>
+                            </button>
+                        </header>
+                        <div class="body text-gray-600">
+
+                            <note-viewer
+                                :notes="notes"
+                                @edit="openNoteForm"
+                            ></note-viewer>
+
+                        </div>
+                    </div>
+
+                    <!--Pomodoro-->
+                    <div class="section-card committed mt-5">
                         <div
                             :class="
                                 `bg-${promodoroColor}-400 text-gray-600 font-bold px-0`
@@ -171,6 +196,14 @@
                 @cancel="isLinkFormOpen = false"
             >
             </link-form-modal>
+
+            <note-form-modal
+                :record-data="noteData"
+                :is-open="isNoteFormOpen"
+                @saved="onNoteSaved"
+                @cancel="isNoteFormOpen = false"
+            >
+            </note-form-modal>
         </div>
     </app-layout>
 </template>
@@ -185,6 +218,8 @@ import Promodoro from "../components/promodoro/index";
 import DialogModal from "../Jetstream/DialogModal";
 import LinkFormModal from "../components/links/Form";
 import LinkViewer from "../components/links/Viewer";
+import NoteFormModal from "../components/notes/Form";
+import NoteViewer from "../components/notes/Viewer";
 import PrimaryButton from "../Jetstream/Button";
 import {subDays, toDate} from "date-fns";
 import {uniq, orderBy} from "lodash-es";
@@ -199,6 +234,8 @@ export default {
         DialogModal,
         LinkFormModal,
         LinkViewer,
+        NoteFormModal,
+        NoteViewer,
         PrimaryButton,
         ScheduleControls
     },
@@ -237,6 +274,12 @@ export default {
                 return [];
             }
         },
+        notes: {
+            type: Array,
+            default() {
+                return [];
+            }
+        },
         committed: {
             type: [Array, Object],
             default() {
@@ -255,6 +298,8 @@ export default {
             isStandupOpen: false,
             isLinkFormOpen: false,
             linkData: {},
+            isNoteFormOpen: false,
+            noteData: {},
             tracker: null
         };
     },
@@ -376,6 +421,23 @@ export default {
 
         onLinkSaved() {
             this.closeLinkForm();
+            this.$inertia.reload({
+                preserveScroll: true
+            });
+        },
+
+        closeNoteForm() {
+            this.noteData = {};
+            this.isNoteFormOpen = false;
+        },
+
+        openNoteForm(formData) {
+            this.noteData = formData;
+            this.isNoteFormOpen = true;
+        },
+
+        onNoteSaved() {
+            this.closeNoteForm();
             this.$inertia.reload({
                 preserveScroll: true
             });

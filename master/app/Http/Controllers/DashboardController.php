@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Note;
 use Illuminate\Http\Request;
 use App\Http\Resources\Item as ItemResource;
 use App\Models\Board;
@@ -45,6 +46,10 @@ class DashboardController extends Controller
             ])->with('stage')->get()),
             'scheduled' => ItemResource::collection(Item::getByCustomField(['date', $commitDate], $request->user())),
             'links' => Link::where([
+                'team_id' => $user->current_team_id,
+                'user_id' => $user->id,
+            ])->get(),
+            'notes' => Note::where([
                 'team_id' => $user->current_team_id,
                 'user_id' => $user->id,
             ])->get(),

@@ -6,6 +6,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FieldController;
 use App\Http\Controllers\HomeStaticController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\NoteController;
 use App\Http\Controllers\StageController;
 use App\Http\Controllers\LinkController;
 use App\Http\Controllers\StandupController;
@@ -70,6 +71,7 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::apiResource('/api/boards', BoardController::class);
     Route::apiResource('/api/fields', FieldController::class);
     Route::apiResource('/links', LinkController::class);
+    Route::apiResource('/note', NoteController::class);
     Route::apiResource('/time-entries', TimeEntryController::class);
     Route::post('/services/google', [ServiceController::class, 'google']);
     Route::get('/services/messages', [ServiceController::class, 'getMessages']);
