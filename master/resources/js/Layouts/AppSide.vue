@@ -1,7 +1,7 @@
 <template>
     <div class="app-side">
         <div class="logo-side">
-            <img src="https://i.imgur.com/mggFBED.png" alt="Keep Tasks" loading="lazy">
+            <img :src="require('../../../public/logo_dashboard.png')" alt="Keep Tasks" loading="lazy">
         </div>
         <div
             class="nav flex-column nav-pills"
@@ -66,6 +66,7 @@
 import AppSideItem from "./AppSideItem";
 import AppSideItemGroup from "./AppSideItemGroup";
 import AppClock from "./AppClock";
+
 
 export default {
     props: {
