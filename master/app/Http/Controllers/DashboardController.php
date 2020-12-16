@@ -41,7 +41,7 @@ class DashboardController extends Controller
             'commitDate' => $commitDate,
             'committed' => ItemResource::collection(Item::where([
                 'team_id' => $user->current_team_id,
-                'user_id' => $user->id,
+//                'user_id' => $user->id,
                 'commit_date' => $commitDate
             ])->with('stage')->get()),
             'scheduled' => ItemResource::collection(Item::getByCustomField(['date', $commitDate], $request->user())),
@@ -55,7 +55,7 @@ class DashboardController extends Controller
             ])->get(),
             'standup' => Standup::where([
                 'team_id' => $user->current_team_id,
-                'user_id' => $user->id,
+//                'user_id' => $user->id,
                 'date' => now()->format('Y-m-d')
             ])->get()
         ]);
