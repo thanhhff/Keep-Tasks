@@ -28,7 +28,7 @@ class DashboardController extends Controller
         return Inertia::render('Dashboard', [
             'boards' => Board::where([
                 'team_id' => $user->current_team_id,
-                'user_id' => $user->id
+//                'user_id' => $user->id
             ])->get()->map(function ($board) {
                 return [
                     'id' => $board->id,
