@@ -8,7 +8,7 @@ use App\Models\Checklist;
 
 class Item extends Model
 {
-    protected $fillable = ['board_id', 'team_id', 'stage_id', 'title', 'order', 'user_id', 'done','commit_date'];
+    protected $fillable = ['board_id', 'team_id', 'stage_id', 'title', 'order', 'user_id', 'done', 'commit_date'];
     protected $with = ['fields', 'checklist'];
     use HasFactory;
 
@@ -25,19 +25,23 @@ class Item extends Model
         });
     }
 
-    public function fields() {
+    public function fields()
+    {
         return $this->hasMany('App\Models\FieldValue', 'entity_id', 'id');
     }
 
-    public function checklist() {
+    public function checklist()
+    {
         return $this->hasMany('App\Models\Checklist', 'item_id', 'id')->orderBy('order');
     }
 
-    public function stage() {
+    public function stage()
+    {
         return $this->belongsTo('App\Models\Stage', 'stage_id', 'id');
     }
 
-    public function saveFields($fields) {
+    public function saveFields($fields)
+    {
         if ($fields) {
             foreach ($fields as $field) {
                 $boardField = $this->stage->board->findOrCreateField($field);
@@ -61,8 +65,8 @@ class Item extends Model
     }
 
 
-
-    public function saveChecklist($list) {
+    public function saveChecklist($list)
+    {
         if ($list) {
             Checklist::where(['item_id' => $this->id])->delete();
             foreach ($list as $check) {
@@ -79,22 +83,26 @@ class Item extends Model
 
     }
 
-    public function timeEntries() {
+    public function timeEntries()
+    {
         return $this->hasMany('App\Models\TimeEntry', 'item_id', 'id');
     }
 
-    public static function createEvent($eventData) {
+    public static function createEvent($eventData)
+    {
         $item = Item::create($eventData);
         $item->saveFields($eventData['fields']);
     }
 
-    public static function getByCustomField($entry, $user) {
-        return Item::whereHas('fields', function($query) use ($entry){
+    public static function getByCustomField($entry, $user)
+    {
+        return Item::whereHas('fields', function ($query) use ($entry) {
+            $query->where('value', $entry[0])->orwhere('value', "")->where('field_name', "owner");
+        })->whereHas('fields', function ($query) use ($entry) {
             $query->where('value', $entry[1]);
-            $query->orWhere('date_value', $entry[1]);
         })->with('stage')->where([
             'team_id' => $user->current_team_id,
-            'user_id' => $user->id,
+//            'user_id' => $user->id,
         ])->whereNull('commit_date')->get();
     }
 
@@ -103,8 +111,8 @@ class Item extends Model
         $filters['done'] = $filters['done'] ?? -1;
 
         $query->when($filters['search'] ?? null, function ($query, $search) {
-            $query->where('title', 'like', '%'.$search.'%');
-        })->when($filters['done'] ?? -1 , function ($query, $done) {
+            $query->where('title', 'like', '%' . $search . '%');
+        })->when($filters['done'] ?? -1, function ($query, $done) {
             if ($done == 'only') {
                 $query->where('done', 1);
             } elseif ($done == -1) {

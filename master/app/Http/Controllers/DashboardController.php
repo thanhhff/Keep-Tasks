@@ -37,7 +37,7 @@ class DashboardController extends Controller
                 ];
             }),
 
-            'todo' => ItemResource::collection(Item::getByCustomField(['status', 'todo'], $request->user())),
+            'todo' => ItemResource::collection(Item::getByCustomField([$user->name, 'todo'], $request->user())),
             'commitDate' => $commitDate,
             'committed' => ItemResource::collection(Item::where([
                 'team_id' => $user->current_team_id,
