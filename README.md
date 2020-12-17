@@ -1,5 +1,4 @@
 # Keep Task (Project Management)
-Monolith app using laravel 8, jetstream, intertia and vue.
 
 ## Installation
 
@@ -10,7 +9,6 @@ Monolith app using laravel 8, jetstream, intertia and vue.
 | [Docker*]()                                           |    --   |
 | [Node.js](http://nodejs.org)                          | `~ ^8`  |
 | npm (comes with Node) or yarn (used)                  | `~ ^5`  |
-| [Cloud Platform Project (with Gmail API)*](https://developers.google.com/gmail/api/quickstart/js)                                |    --   |
 
 ```shell
 node -v
