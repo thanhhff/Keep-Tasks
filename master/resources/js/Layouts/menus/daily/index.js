@@ -1,7 +1,7 @@
 export default {
     name: "accounting",
     label: "Admin",
-    html: "<span>IC </span><span>Admin</span>",
+    html: "<span>Keep Tasks </span><span>Admin</span>",
     headerMenu: [
         {
             label: "Help",
@@ -47,11 +47,11 @@ export default {
             icon: "clock",
             to: "/tracker"
         },
-        {
-            label: "Integrations",
-            icon: "robot",
-            to: "/integrations"
-        },
+        // {
+        //     label: "Integrations",
+        //     icon: "robot",
+        //     to: "/integrations"
+        // },
         {
             divider: ""
         },
